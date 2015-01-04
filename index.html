@@ -1,17 +1,34 @@
 <!DOCTYPE>
 <html>
 <head>
-<title>//crypto#HACK_</title>
+<title>/crypto^HACK_</title>
 <style type="text/css">
 body {
 	background: #000;
 	color: #4f4;
 	font-family: monospace;
 	font-size: 12pt;
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: #4f4;
+}
+h1, h2 {
+	margin: 1em;
 }
 table, p {
 	margin-top: 2em;
 	margin-bottom: 2em;
+}
+p, ul, table, #logos {
+	margin-left: 3em;
+}
+#logos {
+	margin-bottom: 100px;
+}
+th {
+	text-align: left;
 }
 th, td {
 	padding: 0.5em;
@@ -23,23 +40,39 @@ li {
 </style>
 </head>
 <body>
-<h1>//crypto#HACK<span id="blink">_</span></h1>
+<h1>/crypto^HACK<span id="blink">_</span></h1>
 
-<h2>kde?</h2>
-<p>nejvyssi patro Paralelni Polis ("Hackerspace")</p>
+<h2>co?</h2>
 
-<h2>kdy?</h2>
-<p>upresnime</p>
+<p>Vikendovy hackathon zamereny na kryptograficke aplikace a jejich uplatneni ve svete.</p>
 
-<h2>temata</h2>
+<p>Mozne okruhy temat pro inspiraci:</p>
 
 <ul>
-<li>kryptomeny: Bitcoin a jine</li>
-<li>bezpecna komunikace: OTR, PGP, Tor</li>
-<li>decentralizovane platformy: OpenBazaar, Bitmessage, Bitnation</li>
-<li>jine</li>
+<li>kryptomeny a jine blockchain aplikace (Bitcoin, Namecoin, Ethereum, atd.)</li>
+<li>sifrovana komunikace (OTR, PGP, Bitmessage, atd.)</li>
+<li>decentralizovane platformy (OpenBazaar, Bitnation, atd.)</li>
+<li>jine (Tor, I2P, cjdns, OpenVPN, atd.)</li>
 </ul>
 
+<h2>kdo?</h2>
+
+<p>1-5 clenne teamy vytvorene na miste</p>
+
+<p>Nebojte se zucastnit i kdyz nejste zrovna experti na kryptografii.
+Mnoho kryptoaplikaci postrada hezkou grafiku ci uzivatelske rozhrani nebo preklady do cestiny.</p>
+
+<p>Na miste budou pocas celeho konani akce k dispozici mentori ze SatoshiLabs a napoje pro ucastniky (Club Mate a kava) zdarma.</p>
+
+<h2>kde?</h2>
+
+<p>nejvrchnejsi patro Paralelni Polis ("Hackerspace")</p>
+
+<p><a target="_blank" href="http://www.mapy.cz/zakladni?x=14.4504748&y=50.1036754&z=16&q=delnicka%2043%2C%20praha">Delnicka 43, 170 00 Praha 7</a></p>
+
+<h2>kdy?</h2>
+
+<p>jeste upresnime</p>
 
 <h2>harmonogram</h2>
 
@@ -56,13 +89,20 @@ li {
 <tr><td>17:00 - 18:00</td><td>vyhlaseni vitezu</td></tr>
 </table>
 
-<p>Na miste budou pocas celeho konani akce k dispozici mentori ze SatoshiLabs a napoje (Club Mate a kava) zdarma.</p>
-
-<a target="_blank" href="http://satoshilabs.com/"><img src="logo_sl.png" alt="pp" /></a>
+<div id="logos">
+<a target="_blank" href="http://satoshilabs.com/"><img src="logo_sl.png" alt="pp" / style="margin-right: 20px;"></a>
 <a target="_blank" href="http://paralelnipolis.cz/"><img src="logo_pp.png" alt="pp" /></a>
+</div>
 
 <script type="text/javascript">
-setInterval(function(){var el = document.getElementById("blink"); el.style.visibility = el.style.visibility == "" ? "hidden" : "";}, 500);
+var blink = 0;
+setInterval(
+	function(){
+		var el = document.getElementById('blink');
+		el.style.visibility = blink ? '' : 'hidden';
+		blink = !blink;
+	},
+	500);
 </script>
 
 </body>
